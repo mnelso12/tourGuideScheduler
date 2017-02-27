@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+		<script src="main.js"></script>
+
+
+		<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyA_7G5-MUq0tIce9lHec5IVN9OOH1ZfH-Y",
+				authDomain: "tourguideschedule-48ce8.firebaseapp.com",
+				databaseURL: "https://tourguideschedule-48ce8.firebaseio.com",
+				storageBucket: "tourguideschedule-48ce8.appspot.com",
+				messagingSenderId: "90391172309"
+				};
+				firebase.initializeApp(config);
+			</script>
+
+		</head>
+
+		<body class="row red lighten-5">
+			<nav>
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">ND Tour Guide Schedule</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="currentWeek.html">This Week</a></li>
+					<li><a href="allSchedules.html">All Schedules</a></li>
+					<li><a href="">Tour Guide List</a></li>
+				</ul>
+			</div>
+			</nav>
+
+			<div class="row">
+
+				<br>
+
+				<div class="center container">
+					<h3 class="center">All Schedules</h3>
+				</div>
+
+				<br>
+
+				<div class="col s3 offset-s2 white">
+					<table class="striped" id="allSchedulesTable">
+						<tbody>
+							<tr>
+								<td>2-20-2017</td>
+							</tr>
+							<tr>
+								<td>2-27-2017</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+
+				<div class="col s3 offset-s2 white">
+					<table class="striped" id="specificScheduleTable">
+					</table>
+				</div>
+			</div>
+
+				<br>
+
+				<br>
+		</div>
+
+
+
+
+		<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Notre Dame Admissions</h5>
+					<p class="grey-text text-lighten-4">We love our tour guides!</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Built With</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="http://materializecss.com/about.html">Materialize</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://firebase.google.com/">Firebase</a></li>
+						<li><a class="grey-text text-lighten-3" href="http://fontawesome.io/">Font Awesome</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2017 Madelyn Nelson 
+			</div>
+		</div>
+		</footer>
+
+	</body>
+	<script src="firebase.js"></script>
+</html>

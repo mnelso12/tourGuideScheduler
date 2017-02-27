@@ -1,0 +1,170 @@
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+	<script src="main.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyA_7G5-MUq0tIce9lHec5IVN9OOH1ZfH-Y",
+			authDomain: "tourguideschedule-48ce8.firebaseapp.com",
+			databaseURL: "https://tourguideschedule-48ce8.firebaseio.com",
+			storageBucket: "tourguideschedule-48ce8.appspot.com",
+			messagingSenderId: "90391172309"
+			};
+			firebase.initializeApp(config);
+		</script>
+
+
+	</head>
+
+	<body class="row red lighten-5">
+		<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo">ND Tour Guide Schedule</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="currentWeek.html">This Week</a></li>
+				<li><a href="allSchedules.html">All Schedules</a></li>
+				<li><a href="">Tour Guide List</a></li>
+			</ul>
+		</div>
+		</nav>
+
+		<div class="row">
+
+			<br>
+
+			<h3 class="center">Create Schedule</h3>
+
+			<br>
+
+			<div class="col s8 offset-s2 white">
+				<table id="scheduleCreationTable" class="striped">
+					<thead>
+						<tr class="inputRow">
+							<td>
+								<input type="date" class="datepicker" id="date-input">
+								<label for="date">Date</label>
+							</td>
+							<td>
+								<input type="text" class="validate" id="time-input">
+								<label for="last_name">Time</label>
+							</td>
+							<td>
+								<input type="text" class="validate" id="names-input">
+								<label for="last_name">Tour Guides</label>
+
+							</td>
+							<td>
+								<input type="text" class="validate" id="notes-input">
+								<label for="last_name">Notes</label>
+							</td>
+							<td>
+								<a class="waves-effect waves-light btn save-new-row"><i class="material-icons left">done</i></a>
+							</td>
+						</tr>
+					</thead>
+
+					<tbody>
+						<!--
+						<tr class="tourRow">
+							<td class="date">4 February, 2017</td>
+							<td>11:00 AM</td>
+							<td>Nelson, Martin, Berry, Schutte</td>
+							<td></td>
+							<td>
+								<a class="btn-floating waves-effect waves-light cyan edit-row"><i class="material-icons">edit</i></a>
+								<a class="btn-floating waves-effect waves-light red deleteRow"><i class="material-icons">delete</i></a>
+							</td>
+						</tr>
+						<tr class="tourRow">
+							<td class="date">4 February, 2017</td>
+							<td>3:00 PM</td>
+							<td>Nelson, Martin, Berry, Schutte</td>
+							<td>Admit Tour</td>
+							<td>
+								<a class="btn-floating waves-effect waves-light cyan edit-row"><i class="material-icons">edit</i></a>
+								<a class="btn-floating waves-effect waves-light red deleteRow"><i class="material-icons">delete</i></a>
+							</td>
+						</tr>
+						-->
+					</tbody>
+					</table>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col s8 offset-s2">
+					<!-- Modal Trigger -->
+					<a class="right waves-effect waves-light btn-large" href="#modal1">Save</a>
+
+				</div>
+			</div>
+			<br>
+		</div>
+
+
+		<!-- Save Schedule Modal -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>Are you sure you want to save this schedule?</h4>
+			</div>
+			<div class="modal-footer">
+				<a id="saveScheduleToFB" class=" modal-action modal-close waves-effect waves-green cyan btn-flat">Save Schedule</a>
+				<a class=" modal-action modal-close waves-effect waves-green red lighten-4 btn-flat">Cancel</a>
+			</div>
+		</div>
+
+		<!-- Error: Fill in All Inputs Modal-->
+		<div id="modal2" class="modal">
+			<div class="modal-content">
+				<h4>Oops!</h4>
+				<p>Please fill in a date, time, and tour guides for every tour</p>
+			</div>
+			<div class="modal-footer">
+				<a class=" modal-action modal-close waves-effect waves-green cyan btn-flat">Okay</a>
+			</div>
+		</div>
+
+		<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Notre Dame Admissions</h5>
+					<p class="grey-text text-lighten-4">We love our tour guides!</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Built With</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="http://materializecss.com/about.html">Materialize</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://firebase.google.com/">Firebase</a></li>
+						<li><a class="grey-text text-lighten-3" href="http://fontawesome.io/">Font Awesome</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2017 Madelyn Nelson 
+			</div>
+		</div>
+		</footer>
+
+	</body>
+	<script src="firebase.js"></script>
+</html>
