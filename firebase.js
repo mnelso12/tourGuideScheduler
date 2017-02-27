@@ -15,6 +15,7 @@ $(document).ready(function(){
 		clearSpecificScheduleTable();
 		var mondayOfInterest = $(this)[0].innerHTML;
 		getScheduleForWeek(mondayOfInterest);
+		$("#selectedWeekLabel").html(mondayOfInterest);
 	});
 
 	writeUserData("mnelso12", "madelyn", "blah@nd.edu", "my.jpg");
